@@ -11,6 +11,7 @@ int task8();
 int task11();
 void divider();
 int task12();
+void incrementByTwo(int &num);
 
 int task3(){
     double num1;
@@ -130,6 +131,21 @@ int task12(){
     return 0;
 }
 
+void incrementByTwo(int &num){
+    num += 2; 
+}
+
+int task13(){
+    int num1;
+    cout << "Provide a number: ";
+    cin >> num1;
+
+    incrementByTwo(num1);
+
+    cout << "new value is: " << num1 << endl;
+
+    return 0;
+}
 
 int main(){
     // task3();
@@ -138,6 +154,7 @@ int main(){
     // task7();
     // task8();
     // task11();
-    task12();
+    // task12();
+    task13();
     return 0;
 }
