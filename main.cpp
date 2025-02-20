@@ -7,6 +7,7 @@ int task3();
 int task5();
 int task6();
 int task7();
+int task8();
 
 int task3(){
     double num1;
@@ -56,15 +57,14 @@ int task6(){
 int task7(){
     bool terminateProgram = false;
     int num;
-
+    srand(time(NULL));
     do
     {   
-        cout << "Type 1 to flip a coin. Type any other number to terminate program.";
+        cout << "Type 1 to flip a coin. Type any other number to terminate program: ";
         cin >> num;
         if(num == 1){
-            srand(time(NULL));
-            int randumNumber = rand() % 2;
-            if (randumNumber == 1){
+            int randomNumber = rand() % 2;
+            if (randomNumber == 1){
                 cout << "Landed on heads." << endl;
             } else {
                 cout << "Landed on tails." << endl;
@@ -78,12 +78,33 @@ int task7(){
     return 0;
 }
 
+int task8(){
+    bool terminateProgram = false;
+    int num;
+    srand(time(NULL));
+
+    do
+    {   
+        cout << "Type 1 to throw the die. Type any other number to terminate the program: ";
+        cin >> num;
+        if(num == 1){
+            int randomNumber = (rand() % 6)+1;
+            cout << "Number of dots: " << randomNumber << endl;
+        }
+        else{
+            terminateProgram = true;
+        }
+    } while (!terminateProgram);
+    
+    return 0;
+}
 
 
 int main(){
     // task3();
     // task5();
     // task6();
-    task7();
+    // task7();
+    task8();
     return 0;
 }
