@@ -9,7 +9,8 @@ int task6();
 int task7();
 int task8();
 int task11();
-void task11Helper();
+void divider();
+int task12();
 
 int task3(){
     double num1;
@@ -101,14 +102,31 @@ int task8(){
     return 0;
 }
 
-void task11Helper(){
+void divider(){
     for(int i = 0; i < 33; i++){
         cout << "-";
     }
 }
 
 int task11(){
-    task11Helper();
+    divider();
+    return 0;
+}
+
+double multiply(double num1, double num2){
+    return num1 * num2;
+}
+
+int task12(){
+    double num1;
+    double num2;
+
+    cout << "Provide a number: ";
+    cin >> num1;
+    cout << "Provide a number: ";
+    cin >> num2;
+
+    cout << num1 << " x " << num2 << " = " << multiply(num1, num2) << endl;
     return 0;
 }
 
@@ -119,6 +137,7 @@ int main(){
     // task6();
     // task7();
     // task8();
-    task11();
+    // task11();
+    task12();
     return 0;
 }
