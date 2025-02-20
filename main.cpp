@@ -8,6 +8,8 @@ int task5();
 int task6();
 int task7();
 int task8();
+int task11();
+void task11Helper();
 
 int task3(){
     double num1;
@@ -99,12 +101,24 @@ int task8(){
     return 0;
 }
 
+void task11Helper(){
+    for(int i = 0; i < 33; i++){
+        cout << "-";
+    }
+}
+
+int task11(){
+    task11Helper();
+    return 0;
+}
+
 
 int main(){
     // task3();
     // task5();
     // task6();
     // task7();
-    task8();
+    // task8();
+    task11();
     return 0;
 }
