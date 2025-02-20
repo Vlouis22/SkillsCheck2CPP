@@ -20,10 +20,20 @@ int task3(){
     return 0;
 }
 
+int task5(){
+    double num1;
+    cout << "Provide a number: ";
+    cin >> num1;
+    double result = sqrt(num1);
+    cout << "The square root of " << num1 << " is " << result;
+    return 0;
+}
+
 
 
 
 int main(){
-    task3();
+    // task3();
+    task5();
     return 0;
 }
