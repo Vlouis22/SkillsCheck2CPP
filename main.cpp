@@ -12,6 +12,10 @@ int task11();
 void divider();
 int task12();
 void incrementByTwo(int &num);
+int task13();
+int Division(int num1, int num2);
+double Division(double num1, double num2);
+int task15();
 
 int task3(){
     double num1;
@@ -147,6 +151,41 @@ int task13(){
     return 0;
 }
 
+int Division(int num1, int num2){
+    return num1 / num2;
+}
+
+double Division(double num1, double num2){
+    return num1 / num2;
+}
+
+int task15(){
+    int typeOfNum = 1;
+    cout << "type 1 for integer division, type anything else for decimal division.";
+    cin >> typeOfNum;
+    if (typeOfNum == 1){
+        int num1;
+        int num2;
+        cout << "Enter dividend: ";
+        cin >> num1;
+        cout << "Enter divisor: ";
+        cin >> num2;
+        int result = Division(num1, num2);
+        cout << "The result is: " << result << endl;
+    } else {
+        double num1;
+        double num2;
+        cout << "Enter dividend: ";
+        cin >> num1;
+        cout << "Enter divisor: ";
+        cin >> num2;
+        double result = Division(num1, num2);
+        cout << "The result is: " << result << endl;
+    }
+    return 0;
+}
+
+
 int main(){
     // task3();
     // task5();
@@ -155,6 +194,7 @@ int main(){
     // task8();
     // task11();
     // task12();
-    task13();
+    // task13();
+    task15();
     return 0;
 }
