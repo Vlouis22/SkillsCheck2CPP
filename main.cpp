@@ -18,6 +18,9 @@ double Division(double num1, double num2);
 int task15();
 int recursiveFactorial(int n);
 int task16();
+double minutesToHours(int minutes);
+int task17();
+
 
 int task3(){
     double num1;
@@ -202,6 +205,19 @@ int task16(){
     return 0;
 }
 
+inline double minutesToHours(double minutes){
+    return minutes / 60.0;
+}
+
+int task17(){
+    double minutes;
+    cout << "Enter number of minutes: ";
+    cin >> minutes;
+    double hours = minutesToHours(minutes);
+    cout << minutes << " minutes is equal to " << hours << " hours." << endl;
+    return 0;
+}
+
 int main(){
     // task3();
     // task5();
@@ -212,6 +228,7 @@ int main(){
     // task12();
     // task13();
     // task15();
-    task16();
+    // task16();
+    task17();
     return 0;
 }
