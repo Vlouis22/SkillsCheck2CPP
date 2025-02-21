@@ -18,9 +18,11 @@ double Division(double num1, double num2);
 int task15();
 int recursiveFactorial(int n);
 int task16();
-double minutesToHours(int minutes);
+double minutesToHours(double minutes);
 int task17();
-
+void increase(int &total_value, int increaseBy);
+void decrease(int &total_value, int decreaseBy);
+int task19();
 
 int task3(){
     double num1;
@@ -218,6 +220,40 @@ int task17(){
     return 0;
 }
 
+void increase(int &total_value, int increaseBy){
+    total_value += increaseBy;
+}
+
+void decrease(int &total_value, int decreaseBy){
+    total_value -= decreaseBy;
+}
+
+
+int task19(){
+    int number;
+    cout << "Enter initial value: ";
+    cin >> number;
+    
+    cout << "Enter number to increase variable by: ";
+    int increaseBy = 0;
+    cin >> increaseBy;
+    increase(number, increaseBy);
+
+    cout << "Enter number to decrease variable by: ";
+    int decreaseBy = 0;
+    cin >> decreaseBy;
+    decrease(number, decreaseBy);
+
+    cout << "The total value is : " << number << endl; 
+
+    return 0;
+}
+
+int task20(){
+    // TODO
+    return 0;
+}
+
 int main(){
     // task3();
     // task5();
@@ -229,6 +265,7 @@ int main(){
     // task13();
     // task15();
     // task16();
-    task17();
+    // task17();
+    task19();
     return 0;
 }
