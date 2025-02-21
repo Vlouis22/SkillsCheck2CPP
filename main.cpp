@@ -23,6 +23,10 @@ int task17();
 void increase(int &total_value, int increaseBy);
 void decrease(int &total_value, int decreaseBy);
 int task19();
+int task20();
+void setOverallScore(int value);
+
+int overall_score = 0;
 
 int task3(){
     double num1;
@@ -249,9 +253,15 @@ int task19(){
     return 0;
 }
 
+void setOverallScore(int value){
+    overall_score = value;
+}
+
 int task20(){
     // TODO
-    return 0;
+    setOverallScore(5);
+    setOverallScore(100);
+    return overall_score;
 }
 
 int main(){
@@ -266,6 +276,7 @@ int main(){
     // task15();
     // task16();
     // task17();
-    task19();
+    // task19();
+    cout << "Final overall score is " << task20();
     return 0;
 }
