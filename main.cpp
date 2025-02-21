@@ -258,25 +258,24 @@ void setOverallScore(int value){
 }
 
 int task20(){
-    // TODO
     setOverallScore(5);
     setOverallScore(100);
     return overall_score;
 }
 
 int main(){
-    // task3();
-    // task5();
-    // task6();
-    // task7();
-    // task8();
-    // task11();
-    // task12();
-    // task13();
-    // task15();
-    // task16();
-    // task17();
-    // task19();
+    task3();
+    task5();
+    task6();
+    task7();
+    task8();
+    task11();
+    task12();
+    task13();
+    task15();
+    task16();
+    task17();
+    task19();
     cout << "Final overall score is " << task20();
     return 0;
 }
