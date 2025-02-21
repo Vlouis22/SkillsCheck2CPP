@@ -16,6 +16,8 @@ int task13();
 int Division(int num1, int num2);
 double Division(double num1, double num2);
 int task15();
+int recursiveFactorial(int n);
+int task16();
 
 int task3(){
     double num1;
@@ -185,6 +187,20 @@ int task15(){
     return 0;
 }
 
+int recursiveFactorial(int n){
+    if (n <= 1){
+        return 1;
+    } return n * recursiveFactorial(n-1);
+}
+
+int task16(){
+    int num;
+    cout << "Enter a number: ";
+    cin >> num;
+    int result = recursiveFactorial(num);
+    cout << "Factorial of " << num << " is: " << result << endl;
+    return 0;
+}
 
 int main(){
     // task3();
@@ -195,6 +211,7 @@ int main(){
     // task11();
     // task12();
     // task13();
-    task15();
+    // task15();
+    task16();
     return 0;
 }
